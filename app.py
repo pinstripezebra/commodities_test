@@ -10,10 +10,10 @@ df = pd.read_csv(base_path + '//Data//' + 'data.csv')
 predictions_df = pd.read_csv(base_path + '//Data//' + 'predictions.csv')
 print("hello")
 # Initialize the app
-app = Dash(__name__)
-server = app.server
+dash_app = Dash(__name__)
+app = dash_app.server
 # App layout
-app.layout = html.Div([
+dash_app.layout = html.Div([
     html.Div(children= [
              html.H1('Commodities Forecasting'),
 
@@ -60,4 +60,4 @@ def update_output_div(value):
 
 # Run the app
 if __name__ == '__main__':
-    app.run_server(debug=True)
+    dash_app.run_server(debug=True)
