@@ -5,6 +5,7 @@ import pandas as pd
 import plotly.express as px
 import os
 
+
 #loading commodities data to dataframe
 base_path = os.path.dirname(__file__)
 df = pd.read_csv(base_path + '//Data//' + 'data.csv')
