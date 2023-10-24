@@ -24,11 +24,11 @@ colors = {
         'text': '#7FDBFF'}
 
 # Initialize the app
-app = Dash(__name__)
-server = app.server
+dash_app = Dash(__name__)
+app = dash_app.server
 
 # App layout
-app.layout = html.Div(style={'backgroundColor': colors['background']}, children =[
+dash_app.layout = html.Div(style={'backgroundColor': colors['background']}, children =[
     html.Div(children= [
              html.H1('Commodities Price and Global Conflict Correlation'),
              dcc.Markdown('A comprehensive tool for examining commodities price fluctuations in relation to world conflict.'),
@@ -239,4 +239,4 @@ def update_output_div(conflict_region,all_time, five_years, one_year, one_month)
 
 # Run the app
 if __name__ == '__main__':
-    app.run_server(debug=False)
+    dash_app.run_server(debug=False)
