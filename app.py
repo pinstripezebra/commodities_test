@@ -18,7 +18,7 @@ file_name = 'conflict_aggregate.csv'
 base_path = os.path.dirname(__file__)
 total_path = base_path + '//Data//' + file_name
 conflict_df = pd.read_csv(total_path)
-px.set_mapbox_access_token("pk.eyJ1IjoibHVjYXNzZWUiLCJhIjoiY2xuejhzeDNxMHRsejJtcWIxOWo0ZGg1eiJ9.FUIBVWbJjEwE0SS-CYAaHg")
+px.set_mapbox_access_token()
 
 colors = {
         'background': '#A5D8DD',
